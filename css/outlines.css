@@ -28,6 +28,7 @@ a {
     text-decoration: none;
     color: inherit;
     outline: none;
+    transition: .1s linear;
 }
 
 .subheader__menu ul {
@@ -39,6 +40,45 @@ a {
 li {
     display: flex;
     list-style: none;
+}
+
+.subheader__topmenu {
+    position: relative;
+}
+
+.subheader__topmenu li .subheader__submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    z-index: 10;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.subheader__submenu li {
+    display: block;
+    width: 500px;
+}
+
+.subheader__topmenu li:hover .subheader__submenu {
+    display: block;
+    width: 500px;
+}
+
+
+.subheader__submenu li a {
+    display: block;
+    background-color: #ffffff;
+    border-bottom: 1px solid #5577ae;
+    color: #1D407C;
+}
+
+.subheader__submenu li:last-child a {
+    border-bottom: none;
+}
+
+.subheader__submenu li a:hover {
+    color: white;
+    background-color: #1D407C;
 }
 
 .subheader__menu a {
