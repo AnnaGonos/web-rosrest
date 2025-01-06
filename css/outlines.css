@@ -63,7 +63,7 @@ li {
 .subheader__top {
     display: flex;
     justify-content: space-between;
-    padding: 20px 40px;
+    padding: 20px 40px 15px 40px;
 }
 
 .subheader__icon {
@@ -72,7 +72,7 @@ li {
 }
 
 .subheader__img {
-    height: 80px;
+    height: 120px;
     padding-right: 20px;
 }
 
