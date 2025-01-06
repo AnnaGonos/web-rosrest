@@ -1,0 +1,148 @@
+h1, h2, h3, h4, h5, p, a, ol, ul {
+    font-weight: 100;
+    font-family: 'Raleway', sans-serif;
+    color: #000000;
+    margin: 0;
+}
+
+h1 {
+    font-size: 32px;
+}
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+h5, p, a, ul {
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    outline: none;
+}
+
+.subheader__menu ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: flex;
+    list-style: none;
+}
+
+.subheader__menu a {
+    display: inline-block;
+    padding: 20px 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.subheader__bottom a:hover {
+    display: flex;
+    background-color: white;
+    color: #1D407C;
+    padding: 20px 10px;
+    box-sizing: content-box;
+}
+
+.subheader__add-search_icons:hover {
+    color: #1D407C;
+}
+
+.subheader__top {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+}
+
+.subheader__icon {
+    display: flex;
+    align-items: center;
+}
+
+.subheader__img {
+    height: 80px;
+    padding-right: 20px;
+}
+
+.subheader__text {
+    color: #1D407C;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 1.5;
+}
+
+.white-text {
+    color: #ffffff;
+}
+
+.subheader__contacts {
+    display: flex;
+    gap: 20px;
+}
+
+
+.subheader__add-search a {
+    display: flex;
+    padding: 20px 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.subheader__contacts-item, .subheader__add-group, .subheader__add-search {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.subheader__add-group img {
+    color: #ffffff;
+}
+
+.subheader__item-icons, .subheader__add-search_icons {
+    height: 20px;
+    width: 20px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.subheader__add-group:hover .subheader__text {
+    color: #1D407C;
+}
+
+.subheader__add-group img {
+    filter: brightness(0) invert(1);
+}
+
+.subheader__add-group:hover img {
+    filter: brightness(0) saturate(100%) invert(32%) sepia(92%) saturate(555%) hue-rotate(197deg) brightness(50%) contrast(92%); /* Изменение цвета иконки на синий при наведении */
+}
+
+.email-text {
+    text-transform: lowercase;
+}
+
+.subheader__bottom {
+    background-color: #1D407C;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+
+
