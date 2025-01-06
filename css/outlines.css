@@ -21,7 +21,7 @@ h4 {
 }
 
 h5, p, a, ul {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 a {
@@ -43,7 +43,7 @@ li {
 
 .subheader__menu a {
     display: inline-block;
-    padding: 20px 10px;
+    padding: 15px 10px;
     color: white;
     text-decoration: none;
 }
@@ -52,7 +52,7 @@ li {
     display: flex;
     background-color: white;
     color: #1D407C;
-    padding: 20px 10px;
+    padding: 15px 10px;
     box-sizing: content-box;
 }
 
@@ -94,7 +94,7 @@ li {
 
 .subheader__add-search a {
     display: flex;
-    padding: 20px 10px;
+    padding: 15px 10px;
     color: white;
     text-decoration: none;
 }
