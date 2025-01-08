@@ -67,6 +67,7 @@ li {
 
 .subheader__submenu li a {
     display: block;
+    padding: 10px;
     background-color: #ffffff;
     border-bottom: 1px solid #5577ae;
     color: #1D407C;
@@ -78,6 +79,7 @@ li {
 
 .subheader__submenu li a:hover {
     color: white;
+    padding: 10px;
     background-color: #1D407C;
 }
 
@@ -86,14 +88,6 @@ li {
     padding: 15px 10px;
     color: white;
     text-decoration: none;
-}
-
-.subheader__bottom a:hover {
-    display: flex;
-    background-color: white;
-    color: #1D407C;
-    padding: 15px 10px;
-    box-sizing: content-box;
 }
 
 .subheader__add-search_icons:hover {
@@ -106,6 +100,21 @@ li {
     padding: 20px 40px 15px 40px;
 }
 
+.subheader__bottom {
+    background-color: #1D407C;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    height: 54px;
+}
+
+.subheader__bottom a:hover {
+    display: flex;
+    background-color: white;
+    color: #1D407C;
+    padding: 15px 10px;
+    box-sizing: content-box;
+}
 .subheader__icon {
     display: flex;
     align-items: center;
@@ -134,17 +143,22 @@ li {
 
 .subheader__add-search a {
     display: flex;
-    padding: 15px 10px;
+    padding: 10px;
     color: white;
     text-decoration: none;
 }
 
-.subheader__contacts-item, .subheader__add-group, .subheader__add-search {
+.subheader__contacts-item, .subheader__add-group {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
     gap: 10px;
+}
+
+
+.subheader__add-search_icons {
+    cursor: pointer;
 }
 
 .subheader__add-group img {
@@ -177,11 +191,42 @@ li {
     text-transform: lowercase;
 }
 
-.subheader__bottom {
-    background-color: #1D407C;
+.subheader__add-search {
     display: flex;
-    justify-content: space-between;
-    padding: 0 40px;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
 }
+
+.subheader__search {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1;
+}
+
+.subheader__search-input {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    padding-right: 10px;
+    margin-right: 20px;
+}
+
+.subheader__search-input-item {
+    flex: 1;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+.subheader__search-input-item::placeholder {
+    color: #1D407C;
+}
+
+
+
 
 
