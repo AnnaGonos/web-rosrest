@@ -130,7 +130,28 @@
     </div>
     <script src="js/holder.js" defer></script>
 </header>
+<aside class="aside-column">
+    <a href="#" class="aside-column__item">
+        <img alt="Боковая колонка фон 1" src="images/aside/historic.png">
 
+    </a>
+
+    <a href="#" class="aside-column__item">
+        <img alt="Боковая колонка фон 2 Календарь мероприятий" src="images/aside/kalendar-week.webp">
+        <h4 class="aside-column__item_description-child2">Календарь мероприятий</h4>
+    </a>
+    <a href="#" class="aside-column__item">
+        <img alt="Боковая колонка фон 3 Мониторинг" src="images/aside/zakon-naseleniya.jpg">
+        <h4 class="aside-column__item_description-child3">Мониторинг законодательства</h4>
+    </a>
+    <a href="#" class="aside-column__item">
+        <img alt="Боковая колонка фон 4 КультураРФ" src="images/aside/kulture.png">
+        <div class="aside-column__item_description-child4"><span
+                class="aside-column__item_description-child4__k">Культура.</span><span
+            class="aside-column__item_description-child4__rf">рф</span></div>
+        <h5 class="aside-column__item_description-child5">читать.смотреть.посетить</h5>
+    </a>
+</aside>
 <main>
     <section class="cover">
         <div class="cover__slider">
@@ -177,7 +198,6 @@
     </section>
 
 
-
     <section class="about">
         <div class="about__item">
             <img src="images/icons/calendar-week.svg" alt="О нас пример 1">
@@ -189,13 +209,38 @@
         </div>
         <div class="about__item">
             <img src="images/icons/historic-theatre.svg" alt="О нас пример 1">
-            <h5>Более 1000 объектов культурного наследия отреставрировано</h5>
+            <h5>Более 1000 объектов культурного наследия отреставрировано </h5>
         </div>
     </section>
 
     <section>
 
     </section>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const aside = document.querySelector('aside');
+            const main = document.querySelector('main');
+
+            const container = document.createElement('div');
+            container.className = 'columns-container';
+
+            container.style.display = 'flex';
+
+            const leftColumn = document.createElement('div');
+            leftColumn.style.flex = '1';
+
+            leftColumn.appendChild(main);
+
+            container.appendChild(leftColumn);
+            container.appendChild(aside);
+
+            document.body.appendChild(container);
+        });
+
+
+    </script>
 </main>
 
 </body>
