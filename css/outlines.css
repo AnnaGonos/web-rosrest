@@ -203,6 +203,7 @@ li {
     align-items: center;
     justify-content: flex-end;
     flex: 1;
+    gap: 20px;
 }
 
 .subheader__search-input {
@@ -211,7 +212,6 @@ li {
     width: 100%;
     background-color: white;
     padding-right: 10px;
-    margin-right: 20px;
 }
 
 .subheader__search-input-item {
