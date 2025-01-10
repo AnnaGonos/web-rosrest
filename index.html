@@ -131,7 +131,7 @@
     <script src="js/holder.js" defer></script>
 </header>
 <aside class="aside-column">
-    <a href="#" class="aside-column__item">
+    <a href="#"      class="aside-column__item">
         <img alt="Боковая колонка фон 1" src="images/aside/historic.png">
 
     </a>
@@ -213,32 +213,52 @@
         </div>
     </section>
 
-    <section>
-
+    <section class="news">
+        <div class="news__title">
+            <h3>Новости</h3>
+            <hr>
+        </div>
     </section>
-    
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const aside = document.querySelector('aside');
-            const main = document.querySelector('main');
 
-            const container = document.createElement('div');
-            container.className = 'columns-container';
-
-            container.style.display = 'flex';
-
-            const leftColumn = document.createElement('div');
-            leftColumn.style.flex = '1';
-
-            leftColumn.appendChild(main);
-
-            container.appendChild(leftColumn);
-            container.appendChild(aside);
-
-            document.body.appendChild(container);
-        });
-    </script>
+    <script src="js/container.js" defer></script>
 </main>
+<footer>
+    <div class="footer__top">
+        <a href="index.html" class="footer__icon">
+            <div class="footer__img">
+                <img src="images/logotype-main.png" alt="Главная иконка">
+            </div>
+            <h5> Некоммерческое партнерство <br>"Российская ассоциация реставраторов"
+            </h5>
+        </a>
+        <div class="footer__contacts">
+            <a href="https://telegram.im/@russiarestorationcommunity" target="_blank" class="footer__contacts-item">
+                <img src="images/icons/telegram-fill.svg" alt="Иконка телеграма" class="footer__item-icons">
+            </a>
+            <a href="https://vk.com/rosrest" target="_blank" class="footer__contacts-item">
+                <img src="images/icons/vk-2.svg" alt="Иконка вк" class="footer__item-icons">
+            </a>
+            <div class="footer__contacts-item">
+                <img src="images/icons/telephone-fill-2.svg" alt="Номер телефона" class="footer__item-icons">
+                <p>+7 (812) 314-83-98</p>
+            </div>
+            <div class="footer__contacts-item">
+                <img src="images/icons/envelope-at-fill-2.svg" alt="Электронная почта" class="footer__item-icons">
+                <p>info.rosrest@mail.ru</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer__bottom">
+        <hr>
+        <p>© 2021 «Российская Ассоциация Реставраторов». При цитировании и ином использовании материалов портала ссылка
+            на www.rosrest.com обязательна в формате гиперссылки.</p>
+    </div>
+</footer>
+<div id="scrollToTop" style="display: none;">
+    <img src="images/icons/chevron-right.svg" alt="Прокрутка наверх"></div>
+
+<script src="js/container.js" defer></script>
 
 </body>
 </html>
