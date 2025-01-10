@@ -9,13 +9,15 @@ h1, h2, h3, h4, h5, p, a, ol, ul {
 h1 {
     font-size: 30px;
 }
+
 h2 {
     font-size: 26px;
+    font-weight: 400;
 }
 
 h3 {
     font-size: 22px;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 h4 {
@@ -48,6 +50,7 @@ a {
     h1 {
         font-size: 26px;
     }
+
     h2 {
         font-size: 22px;
     }
@@ -304,9 +307,10 @@ aside {
     flex-direction: column;
     justify-content: flex-start;
     width: 220px;
+    height: 720px;
     background-color: #F7F7F7;
     margin-top: 40px;
-    margin-bottom: 15px;
+    /*margin-bottom: 15px;*/
     gap: 30px;
     padding: 20px 20px 0 20px;
 }
@@ -538,38 +542,159 @@ aside h5 {
 }
 
 /* новости */
-.news {
+.news, .review, .monitoring, .project {
+    display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 40px;
+    justify-content: flex-end;
 }
 
-.news__title {
+.news__title, .review__title, .monitoring__title, .project__title {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     gap: 20px;
 }
 
-.news__title-container {
+.news__title-container, .review__title-container,
+.monitoring__title-container, .project__title-container {
     display: flex;
+    width: fit-content;
+    align-items: center;
     gap: 10px;
     /*padding: 10px;*/
     /*border: 1px solid black;*/
 }
 
-.news__title h3 {
-    text-transform: uppercase;
+.news__title-container img, .review__title-container img,
+.monitoring__title-container img, .project__title-container img {
+    height: 20px;
+    width: 20px;
 }
 
-.news__title hr {
+.news__title-container h3, .review__title-container h3,
+.monitoring__title-container h3, .project__title-container h3 {
+    text-transform: uppercase;
+    font-weight: 500;
+    display: flex;
+    width: fit-content;
+}
+
+.news__title hr, .review__title hr, .monitoring__title hr, .project__title hr {
     display: flex;
     width: 100%;
-    height: 0.8px;
+    height: 2px;
+    border: none;
     background-color: black;
 }
 
+.monitoring__title hr {
+    width: 57%;
+}
+
+.news__container, .review__container, .monitoring__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+}
+
+.project__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+.news__item, .review__item, .monitoring__item, .project__item {
+    display: flex;
+    gap: 15px;
+    height: fit-content;
+}
+
+.news__item img {
+    /*overflow: hidden;*/
+    /*position: relative;*/
+}
+
+.news__item-image {
+    height: 200px;
+    max-width: 180px;
+    object-fit: cover;
+}
+
+.project__item {
+    flex-direction: column;
+
+}
+
+.project__item img {
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
+    background-color: black;
+}
+
+.news__item-description h5, .review__item-description h5, .monitoring__item-description h5, .project__item-title {
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.news__item-title, .review__item-title, .monitoring__item-title, .project__item-title {
+    display: flex;
+}
+
+.project__item h5 {
+    width: 300px;
+}
+
+.news__item-description, .news__item-details,
+.review__item-description, .review__item-details,
+.monitoring__item-description, .monitoring__item-details,
+.project__item-description, .project__item-details {
+    display: flex;
+    gap: 15px;
+}
+
+.news__item-description, .review__item-description, .monitoring__item-description {
+    flex-direction: column;
+    opacity: 0.8;
+}
+
+.news__item-icon, .review__item-icon, .monitoring__item-icon {
+    height: 15px;
+    width: 15px;
+}
+
+.news__item-date, .news__item-views, .review__item-date, .review__item-views,
+.monitoring__item-date, .monitoring__item-views {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.news__item-date-text, .news__item-views-text, .review__item-date-text, .review__item-views-text,
+.monitoring__item-date-text, .monitoring__item-views-text {
+    display: flex;
+    color: black;
+    font-weight: 400;
+}
 
 
+.news__button, .review__button, .monitoring__button {
+    display: block;
+    width: fit-content;
+    margin-left: 40%;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: #1D407C solid 1px;
+    background-color: white;
+}
+
+.news__button p, .review__button p, .monitoring__button p {
+    text-transform: uppercase;
+    color: #1D407C;
+    font-weight: 500;
+}
 
 
 /* подвал сайта */
@@ -577,7 +702,7 @@ footer {
     display: flex;
     flex-direction: column;
     background-color: #1D407C;
-    margin-top: 80px;
+    margin-top: 160px;
     padding: 30px 80px 40px 80px;
 }
 
