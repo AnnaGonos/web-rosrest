@@ -441,7 +441,7 @@ aside h5 {
 }
 
 .cover__legal-documents-item--background-image {
-    background-image: url('/images/document_1.png');
+    background-image: url('/images/document-1.png');
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
