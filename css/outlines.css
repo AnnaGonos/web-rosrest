@@ -48,41 +48,32 @@ a {
     }
 
     h1 {
-        font-size: 26px;
+        font-size: 24px;
     }
 
     h2 {
-        font-size: 22px;
+        font-size: 20px;
     }
 
     h3 {
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 500;
     }
 
     h4 {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     h5 {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     p, a, ul, li {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .subheader__menu {
         display: none;
-    }
-
-    .columns-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        gap: 30px;
-
-        padding: 0 80px;
     }
 }
 
@@ -315,6 +306,21 @@ aside {
     padding: 20px 20px 0 20px;
 }
 
+@media screen and (max-width: 600px) {
+    .subheader__top {
+        display: flex;
+        flex-direction: column;
+        padding: 15px 20px 0 20px;
+        gap: 10px;
+    }
+
+    .subheader__contacts, .footer__contacts {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+    }
+}
+
 aside h5 {
     background-color: #1D407C;
 }
@@ -392,6 +398,8 @@ aside h5 {
     background-color: #1D77BF;
 }
 
+
+
 /* слайдер + раздел документов*/
 .cover {
     display: flex;
@@ -453,14 +461,6 @@ aside h5 {
     object-fit: cover;
 }
 
-.aside-column__item {
-    height: 150px;
-    justify-content: center;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-}
 
 .cover__legal-documents-item__desk {
     display: flex;
@@ -623,11 +623,10 @@ aside h5 {
 
 .project__item {
     flex-direction: column;
-
+    width: 300px;
 }
 
 .project__item img {
-    width: 300px;
     height: 250px;
     object-fit: cover;
     background-color: black;
@@ -643,7 +642,7 @@ aside h5 {
 }
 
 .project__item h5 {
-    width: 300px;
+    /*max-width: 300px;*/
 }
 
 .news__item-description, .news__item-details,
@@ -776,8 +775,137 @@ footer {
     background-color: #ffffff;
 }
 
+@media screen and (max-width: 1100px) {
+    .columns-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 30px;
+        padding: 0 40px;
+    }
+
+    .aside-column {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        width: 100%;
+    }
+
+    /*.aside-column {*/
+    /*    display: flex;*/
+    /*    flex-direction: row;*/
+    /*    justify-content: flex-start;*/
+    /*    width: fit-content;*/
+    /*    height: 100%;*/
+    /*    background-color: #F7F7F7;*/
+    /*    margin-top: 40px;*/
+    /*    !*margin-bottom: 15px;*!*/
+    /*    gap: 30px;*/
+    /*    padding: 20px 20px 0 20px;*/
+    /*}*/
+
+    .aside-column__item {
+        height: 200px;
+        width: 100%;
+        justify-content: center;
+        /*align-items: center;*/
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .aside-column__item img {
+        position: absolute;
+        /*width: 250px;*/
+        height: 150px;
+        object-fit: cover;
+        align-items: center;
+    }
 
 
+}
+
+@media screen and (max-width: 600px) {
+    .subheader__icon {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: 10px;
+        justify-content: center;
+    }
+
+    .subheader__icon h5 {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        /*font-size: 11px;*/
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .subheader__img {
+        height: 100px;
+    }
+
+    .columns-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 30px;
+        padding: 0 10px;
+    }
+
+    .subheader__contacts, .footer__contacts {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 10px;
+    }
+
+    .subheader__contacts-item {
+        order: 0;
+    }
+
+    .subheader__contacts-item:nth-child(3) {
+        order: 3;
+    }
+
+    .subheader__contacts-item:nth-child(2) {
+        order: 2;
+    }
+
+    .cover {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 30px;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .footer__top {
+        flex-direction: column;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .project__container {
+        grid-template-columns: 1fr;
+    }
+
+    .project__item {
+        flex-direction: column;
+        width: 330px;
+    }
+
+    .project__item img {
+        height: 200px;
+        object-fit: cover;
+        background-color: black;
+    }
+}
 
 
 
