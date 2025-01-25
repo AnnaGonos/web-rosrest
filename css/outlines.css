@@ -402,9 +402,14 @@ li {
     padding: 0;
 }
 
-.project__container, .about__items {
+.project__container {
     display: grid;
     grid-template-columns: 5fr 3fr 2fr;
+}
+
+.about__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
 }
 
