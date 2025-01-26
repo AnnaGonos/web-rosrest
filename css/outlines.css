@@ -406,6 +406,8 @@ li {
     padding: 0 80px;
 }
 
+
+
 .about__header {
     display: flex;
     flex-direction: column;
@@ -417,6 +419,10 @@ li {
     grid-template-columns: 3fr 2fr;
     column-gap: 20px;
     row-gap: 40px;
+}
+
+.about-us__container .gallery:last-child {
+    grid-column: 1 / 3;
 }
 
 .about-us__text--paragraph {
@@ -1207,6 +1213,11 @@ li {
         padding-top: 20px;
         border-right: 1px solid #434343;
         border-bottom: 1px solid #fff;
+    }
+
+    .about-us__container {
+        grid-template-columns: 1fr;
+        row-gap: 40px;
     }
 
     .news__item {
