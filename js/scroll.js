@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const scrollToTopBtn = document.getElementById('scrollToTop');
 
     window.onscroll = function() {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+        if (document.body.scrollTop > 1200 || document.documentElement.scrollTop > 1200) {
             scrollToTopBtn.style.display = 'flex';
         } else {
             scrollToTopBtn.style.display = 'none';
