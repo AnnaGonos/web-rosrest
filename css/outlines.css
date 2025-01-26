@@ -422,6 +422,7 @@ li {
 .project__container {
     display: grid;
     grid-template-columns: 5fr 3fr 2fr;
+    gap: 20px;
 }
 
 .about__items {
