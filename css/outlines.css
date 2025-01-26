@@ -392,7 +392,6 @@ li {
 
 [class*="__title"] {
     text-transform: uppercase;
-    font-family: "Comfortaa", serif;
     font-weight: 700;
 }
 
@@ -437,7 +436,6 @@ li {
 
 .about__items {
     border-top: 1.5px solid #434343;
-    font-family: "Comfortaa", serif;
 }
 
 .about__content {
@@ -635,7 +633,6 @@ li {
 }
 
 .aside__item-description__content {
-    font-family: "Comfortaa", serif;
     font-weight: 500;
 }
 
