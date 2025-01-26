@@ -445,6 +445,7 @@ li {
 
 .gallery__item {
     overflow: hidden;
+    height: 200px;
 }
 
 .gallery__image {
