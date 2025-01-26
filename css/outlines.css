@@ -402,7 +402,7 @@ li {
 }
 
 
-.about, .cover, .news, .monitoring, .project {
+.about, .cover, .news, .monitoring, .project, .about-us {
     padding: 0 80px;
 }
 
@@ -412,7 +412,93 @@ li {
     gap: 20px;
 }
 
-.about, .news, .monitoring, .project {
+.about-us__container {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    column-gap: 20px;
+    row-gap: 40px;
+}
+
+.about-us__text--paragraph {
+    margin-bottom: 10px;
+}
+
+
+.gallery__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: minmax(200px, 1fr);
+    gap: 10px;
+}
+
+.gallery__grid--one-column {
+    grid-template-columns: 1fr; !important;
+    grid-auto-rows: minmax(300px, 1fr);
+}
+
+
+.gallery__item {
+    overflow: hidden;
+}
+
+.gallery__image {
+    width: 100%;
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.overlay__content {
+    position: relative;
+    text-align: center;
+}
+
+.overlay__image {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.overlay__caption {
+    color: white;
+    margin-top: 10px;
+}
+
+.overlay__nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.overlay__nav--prev {
+    left: 10px;
+}
+
+.overlay__nav--next {
+    right: 10px;
+}
+
+
+
+
+.about, .news, .monitoring, .project, .about-us {
     display: flex;
     flex-direction: column;
     gap: 60px;
@@ -877,7 +963,7 @@ li {
         height: 54px;
         width: 100%;
         position: absolute;
-        top: 32%;
+        top: 35%;
         left: 0;
         background-color: #1D407C;
         z-index: 5;
@@ -899,7 +985,7 @@ li {
         order: 2;
     }
 
-    .about, .cover, .news, .monitoring, .project {
+    .about, .cover, .news, .monitoring, .project, .about-us {
         padding: 0 20px;
     }
 
@@ -916,7 +1002,7 @@ li {
     .subheader__top {
         display: flex;
         flex-direction: column;
-        padding: 20px 20px 0 20px;
+        padding: 20px 20px 20px 20px;
         gap: 20px;
         align-items: flex-start;
     }
@@ -1003,6 +1089,13 @@ li {
 }
 
 @media screen and (max-width: 600px) {
+    .header {
+        position: sticky;
+        top: 0;
+        z-index: 5;
+        background-color: white;
+    }
+
     .subheader__icon {
         gap: 10px;
     }
@@ -1017,10 +1110,10 @@ li {
     }
 
     .subheader__menu {
-        top: 30%;
+        margin-top: 28%;
     }
 
-    .about, .news, .monitoring, .project {
+    .about, .news, .monitoring, .project, .about-us {
         display: flex;
         flex-direction: column;
         gap: 40px;
@@ -1151,7 +1244,7 @@ li {
     }
 
     .subheader__contacts {
-        display: flex;
+        display: none;
         flex-wrap: wrap;
         gap: 10px;
         width: fit-content;
