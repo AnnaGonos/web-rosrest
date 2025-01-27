@@ -107,7 +107,8 @@ a:visited {
 }
 
 .subheader__top {
-    color: #1D407C;!important;
+    color: #1D407C;
+!important;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -265,7 +266,8 @@ li {
     gap: 20px;
     background-color: #1D407C;
     margin-top: 160px;
-    color: white; !important;
+    color: white;
+!important;
     padding: 30px 80px 40px 80px;
 }
 
@@ -432,34 +434,38 @@ li {
 
 [class*="__container-articles--three-to-two"] {
     display: grid;
-    grid-template-columns: 3fr 2fr; !important;
+    grid-template-columns: 3fr 2fr;
+!important;
     gap: 40px;
 }
 
 [class*="__container-articles--two-to-one"] {
     display: grid;
-    grid-template-columns: 2fr 1fr; !important;
+    grid-template-columns: 2fr 1fr;
+!important;
     gap: 40px;
 }
 
 [class*="__container-articles--one-to-one"] {
     display: grid;
-    grid-template-columns: 1fr 1fr; !important;
+    grid-template-columns: 1fr 1fr;
+!important;
     gap: 40px;
 }
 
 [class*="__container-articles--one-to-two"] {
     display: grid;
-    grid-template-columns: 1fr 2fr; !important;
+    grid-template-columns: 1fr 2fr;
+!important;
     gap: 40px;
 }
 
 [class*="__container-articles--three-column"] {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; !important;
+    grid-template-columns: 1fr 1fr 1fr;
+!important;
     gap: 10px;
 }
-
 
 .person__link {
     text-decoration: underline;
@@ -467,14 +473,6 @@ li {
 
 .person__link:hover {
     color: #1D407C;
-}
-
-.about-us__container-articles .gallery:last-child {
-    grid-column: 1 / 3;
-}
-
-[class*="__text-paragraph"] {
-    margin-bottom: 10px;
 }
 
 .person__text-title {
@@ -487,6 +485,56 @@ li {
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+.acting-chairman__container .person__container-articles--one-to-one .person__item {
+    display: flex;
+    flex-direction: row;
+!important;
+}
+
+.acting-chairman__achievements {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    column-gap: 20px;
+}
+
+.acting-chairman__achievement-item {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    column-gap: 20px;
+    margin-bottom: 20px;
+}
+
+
+.acting-chairman__achievement-item:last-child {
+    margin-bottom: 0;
+}
+
+.acting-chairman__achievement-item--language, .acting-chairman__achievement-item--awards {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+
+.acting-chairman__title {
+    color: #1D407C;
+}
+
+.person__personal-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 2px;
+    margin-top: 40px;
+}
+
+.about-us__container-articles .gallery:last-child {
+    grid-column: 1 / 3;
+}
+
+[class*="__text-paragraph"] {
+    margin-bottom: 10px;
 }
 
 .person__image-container {
@@ -522,7 +570,6 @@ li {
     justify-content: space-between;
 }
 
-
 .person__info, .person__contacts {
     display: flex;
     gap: 5px;
@@ -537,6 +584,12 @@ li {
     color: #a3a3a3;
 }
 
+.acting-chairman__container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 .gallery__grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -545,7 +598,8 @@ li {
 }
 
 .gallery__grid--one-column {
-    grid-template-columns: 1fr; !important;
+    grid-template-columns: 1fr;
+!important;
     grid-template-rows: 400px;
 }
 
@@ -1092,7 +1146,7 @@ li {
         order: 2;
     }
 
-    .about, .cover, .news, .monitoring, .project, .about-us, .head-speech, .management {
+    .about, .cover, .news, .monitoring, .project, .about-us, .head-speech, .acting-chairman, .management {
         padding: 0 20px;
     }
 
@@ -1195,6 +1249,7 @@ li {
     }
 
     .person__description {
+        display: flex;
         flex-direction: column;
         gap: 20px;
         align-items: start;
@@ -1227,7 +1282,7 @@ li {
         margin-top: 28%;
     }
 
-    .about, .news, .monitoring, .project, .about-us, .head-speech {
+    .about, .news, .monitoring, .project, .about-us, .head-speech, .acting-chairman, .management {
         display: flex;
         flex-direction: column;
         gap: 40px;
@@ -1337,6 +1392,7 @@ li {
         height: 200px;
     }
 
+
     .monitoring__item-image {
         padding-top: 20px;
         height: 200px;
@@ -1400,6 +1456,18 @@ li {
         justify-content: space-between;
     }
 
+    .acting-chairman .person__description {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: start;
+        justify-content: start;
+    }
+
+    .person__personal-info {
+        margin-top: 20px;
+    }
+
     [class*="__container-articles--one-to-one"] {
         display: grid;
         grid-template-columns: 1fr;
@@ -1417,5 +1485,15 @@ li {
         display: flex;
         flex-direction: column;
         gap: 20px;
+    }
+
+    .acting-chairman__achievements {
+        display: grid;
+        grid-template-columns: 1fr;
+        column-gap: 20px;
+    }
+
+    .acting-chairman__achievement-title {
+        margin-bottom: 20px;
     }
 }
