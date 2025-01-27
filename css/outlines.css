@@ -402,11 +402,11 @@ li {
 }
 
 
-.about, .cover, .news, .monitoring, .project, .about-us, .head-speech, .management {
+.about, .cover, .news, .monitoring, .project, .about-us, .head-speech, .management, .acting-chairman {
     padding: 0 80px;
 }
 
-.about, .news, .monitoring, .project, .about-us, .head-speech, .management {
+.about, .news, .monitoring, .project, .about-us, .head-speech, .management, .acting-chairman {
     display: flex;
     flex-direction: column;
     gap: 60px;
@@ -514,12 +514,14 @@ li {
     align-items: start;
 }
 
-.person:first-child .person__item .person__description {
+.person:first-child .person__item .person__description,
+.head-speech__container-articles .person .person__item .person__description {
     flex-direction: row;
     gap: 20px;
     align-items: end;
     justify-content: space-between;
 }
+
 
 .person__info, .person__contacts {
     display: flex;
