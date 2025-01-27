@@ -402,11 +402,15 @@ li {
 }
 
 
-.about, .cover, .news, .monitoring, .project, .about-us {
+.about, .cover, .news, .monitoring, .project, .about-us, .head-speech, .management {
     padding: 0 80px;
 }
 
-
+.about, .news, .monitoring, .project, .about-us, .head-speech, .management {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
 
 .about__header {
     display: flex;
@@ -414,38 +418,139 @@ li {
     gap: 20px;
 }
 
-.about-us__container {
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    column-gap: 20px;
-    row-gap: 40px;
+.management__container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
-.about-us__container .gallery:last-child {
+[class*="__container-articles"] {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+[class*="__container-articles--three-to-two"] {
+    display: grid;
+    grid-template-columns: 3fr 2fr; !important;
+    gap: 40px;
+}
+
+[class*="__container-articles--two-to-one"] {
+    display: grid;
+    grid-template-columns: 2fr 1fr; !important;
+    gap: 40px;
+}
+
+[class*="__container-articles--one-to-one"] {
+    display: grid;
+    grid-template-columns: 1fr 1fr; !important;
+    gap: 40px;
+}
+
+[class*="__container-articles--one-to-two"] {
+    display: grid;
+    grid-template-columns: 1fr 2fr; !important;
+    gap: 40px;
+}
+
+[class*="__container-articles--three-column"] {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; !important;
+    gap: 10px;
+}
+
+
+.person__link {
+    text-decoration: underline;
+}
+
+.person__link:hover {
+    color: #1D407C;
+}
+
+.about-us__container-articles .gallery:last-child {
     grid-column: 1 / 3;
 }
 
-.about-us__text--paragraph {
+[class*="__text-paragraph"] {
     margin-bottom: 10px;
 }
 
+.person__text-title {
+    font-size: 1.1em;
+    font-weight: 500;
+    padding: 0;
+}
+
+.person__item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.person__image-container {
+    display: grid;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.person__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.person__description {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: start;
+}
+
+.person:first-child .person__item .person__description {
+    flex-direction: row;
+    gap: 20px;
+    align-items: end;
+    justify-content: space-between;
+}
+
+.person__info, .person__contacts {
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+}
+
+.person__contacts {
+    gap: 2px;
+}
+
+.person__post {
+    color: #a3a3a3;
+}
 
 .gallery__grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-auto-rows: minmax(250px, 1fr);
-    gap: 10px;
+    grid-auto-rows: 200px;
+    gap: 1px;
 }
 
 .gallery__grid--one-column {
     grid-template-columns: 1fr; !important;
-    grid-auto-rows: minmax(300px, 1fr);
+    grid-template-rows: 400px;
 }
 
 
 .gallery__item {
     overflow: hidden;
-    height: 250px;
+    height: 100%;
 }
 
 .gallery__image {
@@ -500,15 +605,6 @@ li {
 
 .overlay__nav--next {
     right: 10px;
-}
-
-
-
-
-.about, .news, .monitoring, .project, .about-us {
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
 }
 
 .monitoring__container {
@@ -741,7 +837,7 @@ li {
 .aside__item {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -778,6 +874,7 @@ li {
 
 .aside__item-description__content {
     font-weight: 500;
+    width: 150px;
 }
 
 /* слайдер + раздел документов*/
@@ -940,6 +1037,7 @@ li {
         height: 100%;
         gap: 20px;
     }
+
 }
 
 @media screen and (max-width: 900px) {
@@ -992,7 +1090,7 @@ li {
         order: 2;
     }
 
-    .about, .cover, .news, .monitoring, .project, .about-us {
+    .about, .cover, .news, .monitoring, .project, .about-us, .head-speech, .management {
         padding: 0 20px;
     }
 
@@ -1093,6 +1191,13 @@ li {
     .footer__contacts-item:last-child {
         order: 3;
     }
+
+    .person__description {
+        flex-direction: column;
+        gap: 20px;
+        align-items: start;
+        justify-content: start;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -1120,7 +1225,7 @@ li {
         margin-top: 28%;
     }
 
-    .about, .news, .monitoring, .project, .about-us {
+    .about, .news, .monitoring, .project, .about-us, .head-speech {
         display: flex;
         flex-direction: column;
         gap: 40px;
@@ -1216,7 +1321,7 @@ li {
         border-bottom: 1px solid #fff;
     }
 
-    .about-us__container {
+    [class*="__container-articles--three-to-two"], [class*="__container-articles--two-to-one"] {
         display: flex;
         flex-direction: column;
         gap: 20px;
@@ -1284,5 +1389,31 @@ li {
         align-items: center;
         justify-content: center;
         z-index: 10;
+    }
+
+    .person__description {
+        flex-direction: row;
+        gap: 20px;
+        align-items: end;
+        justify-content: space-between;
+    }
+
+    [class*="__container-articles--one-to-one"] {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    [class*="__container-articles--three-column"] {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+        column-gap: 10px;
+    }
+
+    .person__item {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
     }
 }
