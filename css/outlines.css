@@ -1060,11 +1060,11 @@ li {
     min-height: 250px;
 }
 
-.empty {
-    flex: 1 1 0;
-    padding: 0;
-    border: none;
-}
+/*.empty {*/
+/*    flex: 1 1 0;*/
+/*    padding: 0;*/
+/*    border: none;*/
+/*}*/
 
 .charter__description-image {
     height: 100%;
