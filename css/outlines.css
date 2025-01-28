@@ -411,11 +411,11 @@ li {
 }
 
 
-.about, .cover, .news, .monitoring, .project, .about-us, .head-speech, .management, .acting-chairman, .charter {
+.about, .cover, .news, .monitoring, .project, .about-us, .rewards, .head-speech, .management, .acting-chairman, .charter {
     padding: 0 80px;
 }
 
-.about, .news, .monitoring, .project, .about-us, .head-speech, .management, .acting-chairman, .charter {
+.about, .news, .monitoring, .project, .about-us, .rewards, .head-speech, .management, .acting-chairman, .charter {
     display: flex;
     flex-direction: column;
     gap: 60px;
@@ -431,52 +431,6 @@ li {
     display: flex;
     flex-direction: column;
     gap: 40px;
-}
-
-[class*="__container-articles"] {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 40px;
-}
-
-[class*="__container-articles--three-to-two"] {
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-!important;
-    gap: 40px;
-}
-
-[class*="__container-articles--two-to-one"] {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-!important;
-    gap: 40px;
-}
-
-[class*="__container-articles--one-to-one"] {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-!important;
-    gap: 40px;
-}
-
-[class*="__container-articles--one-to-two"] {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-!important;
-    gap: 40px;
-}
-
-[class*="__container-articles--three-column"] {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
-}
-
-[class*="__container-articles--five-column"] {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
 }
 
 .person__link {
@@ -609,8 +563,7 @@ li {
 }
 
 .gallery__grid--one-column {
-    grid-template-columns: 1fr;
-!important;
+    grid-template-columns: 1fr; !important;
     grid-template-rows: 400px;
 }
 
@@ -891,6 +844,59 @@ li {
     display: flex;
     gap: 10px;
 }
+
+
+[class*="__container-articles"] {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+[class*="__container-articles--three-to-two"] {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+!important;
+    gap: 40px;
+}
+
+[class*="__container-articles--two-to-one"] {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+!important;
+    gap: 40px;
+}
+
+[class*="__container-articles--one-to-one"] {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+!important;
+    gap: 40px;
+}
+
+[class*="__container-articles--one-to-two"] {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+!important;
+    gap: 40px;
+}
+
+[class*="__container-articles--three-column"] {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+[class*="__container-articles--five-column"] {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); !important;
+    gap: 20px;
+}
+
+.gallery__container-articles--five-column {
+    grid-auto-rows: 350px;
+}
+
+
 
 /* боковые разделы */
 .aside {
@@ -1205,7 +1211,7 @@ li {
         order: 2;
     }
 
-    .about, .cover, .news, .monitoring, .project, .about-us, .charter, .head-speech, .acting-chairman, .management {
+    .about, .cover, .news, .monitoring, .project, .about-us, .rewards, .charter, .head-speech, .acting-chairman, .management {
         padding: 0 20px;
     }
 
@@ -1347,7 +1353,7 @@ li {
         margin-top: 28%;
     }
 
-    .about, .news, .monitoring, .project, .about-us, .charter, .head-speech, .acting-chairman, .management {
+    .about, .news, .monitoring, .project, .about-us, .rewards, .charter, .head-speech, .acting-chairman, .management {
         display: flex;
         flex-direction: column;
         gap: 40px;
