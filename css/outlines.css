@@ -11,6 +11,13 @@
 }
 
 @font-face {
+    font-family: 'Raleway-Medium';
+    src: url('fonts/Raleway/Raleway-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'Comfortaa';
     src: url('fonts/Comfortaa/Comfortaa-Bold.ttf') format('truetype');
     font-weight: normal;
@@ -404,11 +411,11 @@ li {
 }
 
 
-.about, .cover, .news, .monitoring, .project, .about-us, .head-speech, .management, .acting-chairman {
+.about, .cover, .news, .monitoring, .project, .about-us, .head-speech, .management, .acting-chairman, .charter {
     padding: 0 80px;
 }
 
-.about, .news, .monitoring, .project, .about-us, .head-speech, .management, .acting-chairman {
+.about, .news, .monitoring, .project, .about-us, .head-speech, .management, .acting-chairman, .charter {
     display: flex;
     flex-direction: column;
     gap: 60px;
@@ -463,8 +470,13 @@ li {
 [class*="__container-articles--three-column"] {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-!important;
     gap: 10px;
+}
+
+[class*="__container-articles--six-column"] {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
 }
 
 .person__link {
@@ -490,7 +502,6 @@ li {
 .acting-chairman__container .person__container-articles--one-to-one .person__item {
     display: flex;
     flex-direction: row;
-!important;
 }
 
 .acting-chairman__achievements {
@@ -1039,6 +1050,54 @@ li {
     margin-top: 2px;
 }
 
+.charter__report-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid #000;
+    min-height: 250px;
+}
+
+.empty {
+    flex: 1 1 0;
+    padding: 0;
+    border: none;
+}
+
+.charter__description-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.charter__description {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.charter__description-title {
+    font-weight: 400;
+    font-family: 'Raleway-Medium', sans-serif;
+    /*font-size: 1em;*/
+}
+
+.charter__links {
+    display: flex;
+    justify-content: end;
+}
+
+.charter__description-icon, .charter__link-icon {
+    display: flex;
+    height: 20px;
+    width: 20px;
+    color: black;
+}
+
+
+
 #scrollToTop {
     display: none;
     position: fixed;
@@ -1146,7 +1205,7 @@ li {
         order: 2;
     }
 
-    .about, .cover, .news, .monitoring, .project, .about-us, .head-speech, .acting-chairman, .management {
+    .about, .cover, .news, .monitoring, .project, .about-us, .charter, .head-speech, .acting-chairman, .management {
         padding: 0 20px;
     }
 
@@ -1255,6 +1314,12 @@ li {
         align-items: start;
         justify-content: start;
     }
+
+    [class*="__container-articles--six-column"] {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -1282,7 +1347,7 @@ li {
         margin-top: 28%;
     }
 
-    .about, .news, .monitoring, .project, .about-us, .head-speech, .acting-chairman, .management {
+    .about, .news, .monitoring, .project, .about-us, .charter, .head-speech, .acting-chairman, .management {
         display: flex;
         flex-direction: column;
         gap: 40px;
@@ -1479,6 +1544,13 @@ li {
         grid-template-columns: 1fr;
         row-gap: 20px;
         column-gap: 10px;
+    }
+
+    [class*="__container-articles--six-column"] {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 10px;
+        row-gap: 20px;
     }
 
     .person__item {
