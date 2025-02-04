@@ -414,12 +414,12 @@ li {
 
 
 .about, .cover, .news, .monitoring, .project, .about-us, .rewards, .head-speech, .management, .acting-chairman,
-.charter, .partners, .contacts {
+.charter, .partners, .contacts, .event-calendar {
     padding: 0 80px;
 }
 
 .about, .news, .monitoring, .project, .about-us, .rewards, .head-speech, .management, .acting-chairman, .charter,
-.partners, .contacts {
+.partners, .contacts, .event-calendar {
     display: flex;
     flex-direction: column;
     gap: 60px;
@@ -1126,6 +1126,40 @@ li {
     height: 150px;
 }
 
+.event-calendar__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.event-calendar__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 10px;
+    border: 1px solid #a3a3a3;
+}
+
+.event-calendar__description {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.event-calendar__name {
+    font-size: 0.9rem;
+}
+
+.event-calendar__place, .event-calendar__date span:nth-child(2) {
+    color: #a3a3a3;
+}
+
+.event-calendar__date {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
 
 #scrollToTop {
     display: none;
@@ -1235,7 +1269,7 @@ li {
     }
 
     .about, .cover, .news, .monitoring, .project, .about-us, .rewards, .charter, .head-speech, .acting-chairman,
-    .partners, .management, .contacts {
+    .partners, .management, .contacts, .event-calendar {
         padding: 0 20px;
     }
 
@@ -1385,7 +1419,7 @@ li {
     }
 
     .about, .news, .monitoring, .project, .about-us, .rewards, .charter, .head-speech, .acting-chairman,
-    .management, .partners, .contacts {
+    .management, .partners, .contacts, .event-calendar {
         display: flex;
         flex-direction: column;
         gap: 40px;
@@ -1638,5 +1672,9 @@ li {
         height: 100%;
     }
 
-
+    .event-calendar__container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+    }
 }
