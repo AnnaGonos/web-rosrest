@@ -915,6 +915,40 @@ li {
     object-fit: contain;
 }
 
+.event-calendar__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.event-calendar__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 10px;
+    border: 1px solid #a3a3a3;
+}
+
+.event-calendar__description {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.event-calendar__name {
+    font-size: 0.9rem;
+}
+
+.event-calendar__place, .event-calendar__date span:nth-child(2) {
+    color: #a3a3a3;
+}
+
+.event-calendar__date {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
 
 
 /* боковые разделы */
@@ -1124,41 +1158,6 @@ li {
 
 .contacts__container .person__item:first-child .person__image-container  {
     height: 150px;
-}
-
-.event-calendar__container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-}
-
-.event-calendar__item {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 20px;
-    padding: 10px;
-    border: 1px solid #a3a3a3;
-}
-
-.event-calendar__description {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.event-calendar__name {
-    font-size: 0.9rem;
-}
-
-.event-calendar__place, .event-calendar__date span:nth-child(2) {
-    color: #a3a3a3;
-}
-
-.event-calendar__date {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
 }
 
 #scrollToTop {
