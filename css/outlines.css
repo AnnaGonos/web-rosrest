@@ -114,8 +114,7 @@ a:visited {
 }
 
 .subheader__top {
-    color: #1D407C;
-!important;
+    color: #1D407C; !important;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -160,6 +159,9 @@ a:visited {
 body {
     margin: 0;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 section {
@@ -411,11 +413,13 @@ li {
 }
 
 
-.about, .cover, .news, .monitoring, .project, .about-us, .rewards, .head-speech, .management, .acting-chairman, .charter {
+.about, .cover, .news, .monitoring, .project, .about-us, .rewards, .head-speech, .management, .acting-chairman,
+.charter, .partners, .contacts {
     padding: 0 80px;
 }
 
-.about, .news, .monitoring, .project, .about-us, .rewards, .head-speech, .management, .acting-chairman, .charter {
+.about, .news, .monitoring, .project, .about-us, .rewards, .head-speech, .management, .acting-chairman, .charter,
+.partners, .contacts {
     display: flex;
     flex-direction: column;
     gap: 60px;
@@ -861,22 +865,19 @@ li {
 
 [class*="__container-articles--two-to-one"] {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-!important;
+    grid-template-columns: 2fr 1fr;!important;
     gap: 40px;
 }
 
 [class*="__container-articles--one-to-one"] {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-!important;
+    grid-template-columns: 1fr 1fr;!important;
     gap: 40px;
 }
 
 [class*="__container-articles--one-to-two"] {
     display: grid;
-    grid-template-columns: 1fr 2fr;
-!important;
+    grid-template-columns: 1fr 2fr;!important;
     gap: 40px;
 }
 
@@ -894,6 +895,24 @@ li {
 
 .gallery__container-articles--five-column {
     grid-auto-rows: 350px;
+}
+
+.partners__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.partners__item {
+    display: flex;
+    height: 180px;
+}
+
+.partners__image {
+    height: 180px;
+    max-width: 200px;
+    object-fit: contain;
 }
 
 
@@ -1066,12 +1085,6 @@ li {
     min-height: 250px;
 }
 
-/*.empty {*/
-/*    flex: 1 1 0;*/
-/*    padding: 0;*/
-/*    border: none;*/
-/*}*/
-
 .charter__description-image {
     height: 100%;
     width: 100%;
@@ -1102,6 +1115,16 @@ li {
     color: black;
 }
 
+.contacts__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 10px;
+    row-gap: 40px;
+}
+
+.contacts__container .person__item:first-child .person__image-container  {
+    height: 150px;
+}
 
 
 #scrollToTop {
@@ -1211,7 +1234,8 @@ li {
         order: 2;
     }
 
-    .about, .cover, .news, .monitoring, .project, .about-us, .rewards, .charter, .head-speech, .acting-chairman, .management {
+    .about, .cover, .news, .monitoring, .project, .about-us, .rewards, .charter, .head-speech, .acting-chairman,
+    .partners, .management, .contacts {
         padding: 0 20px;
     }
 
@@ -1326,6 +1350,13 @@ li {
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
     }
+
+    .contacts__container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 10px;
+        row-gap: 40px;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -1353,7 +1384,8 @@ li {
         margin-top: 28%;
     }
 
-    .about, .news, .monitoring, .project, .about-us, .rewards, .charter, .head-speech, .acting-chairman, .management {
+    .about, .news, .monitoring, .project, .about-us, .rewards, .charter, .head-speech, .acting-chairman,
+    .management, .partners, .contacts {
         display: flex;
         flex-direction: column;
         gap: 40px;
@@ -1574,4 +1606,37 @@ li {
     .acting-chairman__achievement-title {
         margin-bottom: 20px;
     }
+
+    .partners__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 20px;
+    }
+
+    .partners__item {
+        display: flex;
+        height: 180px;
+        justify-content: center;
+    }
+
+    .partners__image {
+        height: 180px;
+        max-width: 150px;
+        object-fit: contain;
+    }
+
+    .contacts__container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        column-gap: 10px;
+        row-gap: 40px;
+    }
+
+    .contacts__container .person__item:first-child .person__image-container  {
+        height: 100%;
+    }
+
+
 }
