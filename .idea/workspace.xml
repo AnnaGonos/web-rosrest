@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f18ec9ea-6554-4509-9bc0-41e1eb94e257" name="Changes" comment="feat: доделана основная страницы сайта">
-      <change afterPath="$PROJECT_DIR$/123.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +49,7 @@
   &quot;keyToString&quot;: {
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/gonos/WebstormProjects/IS-web-2024-5sem&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
@@ -69,7 +70,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-WS-242.23339.15" />
+        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-WS-243.23654.157" />
       </set>
     </attachedChunks>
   </component>
@@ -89,6 +90,12 @@
       <workItem from="1736902936448" duration="2688000" />
       <workItem from="1737276049336" duration="596000" />
       <workItem from="1737703122123" duration="3000" />
+      <workItem from="1739274940094" duration="64000" />
+      <workItem from="1739306204072" duration="106000" />
+      <workItem from="1739620036138" duration="3688000" />
+      <workItem from="1739804778284" duration="1185000" />
+      <workItem from="1742441027947" duration="2760000" />
+      <workItem from="1742913732922" duration="618000" />
     </task>
     <task id="LOCAL-00001" summary="feat: шаблон для хедера">
       <option name="closed" value="true" />
